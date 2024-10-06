@@ -629,11 +629,11 @@ if __name__ == "__main__":
                     
                     head=task.children[0]
                     if head.level<1:
-                        close_task(game, message='_finished')
+                        close_task(game, message='')
                         game.stats_hp+=task.hairs
                         game.stats_sh-=50-task.hairs-task.dmg_done
                     elif task.time_left<1:
-                        close_task(game, message='_failed')
+                        close_task(game, message='')
                         game.stats_hp-=task.hairs
                         game.state_sh-=50-task.hairs-task.dmg_done
 
@@ -676,7 +676,7 @@ if __name__ == "__main__":
             task.final_message=''
 
             #spawning children
-            x_button=thing((10, 10), 0, (50, 50), image='_ryan', update_func=task_x_button, tag='task_x_button', children=[])
+            x_button=thing((10, 10), 0, (50, 50), image='_xbutt', update_func=task_x_button, tag='task_x_button', children=[])
 
             if task.type=='hair cutting':
                 head=thing((0, 0), 0, (600, 600), image='_head1', update_func=task_head, start_func=task_head_start, tag='task_head', children=[])
@@ -947,14 +947,9 @@ if __name__ == "__main__":
                 map_read = [line.rstrip() for line in file]
 
             tile_size=100
-
-            load_image('astronaut_placeholder.jpeg', title='_astro')
-            load_image('stolen tile -P.jpeg', title='_tile')
-            load_image('hidup myvi!!!.jpeg', title='_myvi')
-            load_image('qr1 -- helio vs geo.png', title='_qrc')
-            load_image('ryanair.jpeg', title='_ryan')
-            load_image('ryanair.jpeg', title='_failed')
-            load_image('stolen tile -P.jpeg', title='_finished')
+            
+            load_image('pixelz/x_button.jpg', title='_xbutt')
+            load_image('pixelz/astronaut.jpg', title='_astro')
             load_image('pixelz/hair1.png', title='_head1')
             load_image('pixelz/hair2.png', title='_head2')
             load_image('pixelz/hair3.png', title='_head3')
