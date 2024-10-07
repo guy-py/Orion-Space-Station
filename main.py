@@ -635,7 +635,7 @@ if __name__ == "__main__":
                     elif task.time_left<1:
                         close_task(game, message='')
                         game.stats_hp-=task.hairs
-                        game.state_sh-=50-task.hairs-task.dmg_done
+                        game.stats_sh-=50-task.hairs-task.dmg_done
 
                 elif task.type=='number pad':
                     if pygame.mouse.get_pressed(3)[0]:
