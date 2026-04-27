@@ -984,7 +984,7 @@ if __name__ == "__main__":
 
             
             game.tile_set={}
-            for x in map_read[:map_read.index('')]:
+            for x in map_read[map_read.index('')]:
                 rep, act=x.split(' ')
                 game.tile_set[rep]=act
 
